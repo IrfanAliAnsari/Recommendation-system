@@ -1,0 +1,18 @@
+#navWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+#navWrapper a {
+    padding: 2px 10px;
+}
+
+#navWrapper a:hover {
+    background-color: rgba(255,255,255,.514);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #253237;
+}

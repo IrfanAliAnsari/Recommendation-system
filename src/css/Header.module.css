@@ -1,0 +1,18 @@
+#headerWrapper {
+    width: 100vw;
+    height: 40px;
+    background-color: #9db4c0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 10px; */
+    z-index: 10;
+}
+
+.title {
+    text-transform: uppercase;
+    font-weight: 650;
+    color: #253237;
+    display: block;
+    padding: 10px
+}

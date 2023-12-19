@@ -1,0 +1,33 @@
+#form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 30px;
+}
+
+#searchBox {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    line-height: 2;
+    width: min(50%, 400px);
+    padding: 7px 15px 5px;
+    box-shadow: 1px 1px 2px black, inset 1px 1px 3px #dee2e6;
+}
+
+#btn {
+    cursor: pointer;
+    background-color: #52b69a;
+    color: #f7fff7;
+    width: 150px;
+    line-height: 3;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px #99d98c, inset 1px 1px 3px #99d98c;
+    transition: all .2s ease;
+}
+
+#btn:hover {
+    background-color: #1a535c;
+}
