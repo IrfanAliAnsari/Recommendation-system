@@ -4,7 +4,7 @@ import styles from '../css/Recommendation.module.css';
 import similarityScore from '../data/cosine_similarity_score.json';
 
 const Recommendation = () => {
-
+ 
     //set state for click button of recommendation
     const [isClicked,setClicked] = useState(false);
 
@@ -16,8 +16,8 @@ const Recommendation = () => {
 
     const recommend =() => {
         setClicked(true);
-        let bookList = new Array();
-        let index = availableBooks.indexOf(searchValue);
+        let bookList = [];
+        let index = availableBooks.map(bookName => bookName.toLowerCase()).indexOf(searchValue.toLowerCase());
         let similarBooks = Object.entries(similarityScore[index]).sort((a,b) => b[1] - a[1]).slice(1,6);
         similarBooks.map(item => {
             bookList.push(availableBooks[item[0]]);
@@ -40,15 +40,15 @@ const Recommendation = () => {
                 isClicked ? 
                 <>
                     <h1>Recommended</h1>
-                    {
-                        list.map(item => {
-                            return(
-                                <p>{item}</p>
-                            )
-                        })
-                    }
+                        {
+                            list.map(item => {
+                                return(
+                                    <p>{item}</p>
+                                )
+                            })
+                        }
                 </> :
-                <>
+                <div className={styles.grid}>
                     <h1>Available Books</h1>
                     {
                         availableBooks.filter(item => {
@@ -57,7 +57,7 @@ const Recommendation = () => {
                             return <p>{item}</p>
                         })
                     }
-                </>
+                </div>
             }
         </>
     );

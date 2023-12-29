@@ -31,3 +31,10 @@
 #btn:hover {
     background-color: #1a535c;
 }
+
+.grid {
+    display: grid;
+    place-content: start;
+    margin: 20px;
+    font-size: clamp(10px,3vw,34px);
+}

@@ -1,6 +1,31 @@
 .bookContainer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 20px;
     padding: 10px;
+    overflow-x: hidden;
+}
+
+.cards {
+    aspect-ratio: 3/7;
+}
+
+.imgContainer {
+    aspect-ratio: 1.25;
+    object-fit: contain;
+}
+
+.textContainer{
+    padding: 5px;
+}
+
+.ranks,
+.bookNames,
+.authorNames,
+.publishedYear,
+.bookRatings {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: clamp(16px, 0.39625vw, 20px);
 }
